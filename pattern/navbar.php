@@ -15,7 +15,7 @@
         <a href=""><img width="300px" src="/img/logotext.png" alt=""></a>
     </div>
         <div class="box-li">
-        <li><a class="navbar-button" href="">Новости</a></li>
+        <li><a style="color: #0288ce;" class="navbar-button" href="">Новости</a></li>
         <li><a class="navbar-button" href="">Специальности</a></li>
         <li><a class="navbar-button" href="">Расписание</a></li>
         <li><a class="navbar-button" href="/php/Reviews.php">Отзывы</a></li>
