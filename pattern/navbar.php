@@ -11,14 +11,18 @@
 <header id="header" class="header">
     <ul>
         <a href="/index.php"><img style="cursor: pointer;" width="80px" src="/img/logo.png" alt=""></a>
-        <a href="/index.php"><img style="left: 10px; cursor: pointer; position: relative; bottom: 20px;" width="180px" src="/img/logotext.png" src="/img/logotext.png" alt=""></a>
+        <div class="logo-text">
+        <a href=""><img width="300px" src="/img/logotext.png" alt=""></a>
+    </div>
+        <div class="box-li">
         <li><a class="navbar-button" href="">Новости</a></li>
         <li><a class="navbar-button" href="">Специальности</a></li>
         <li><a class="navbar-button" href="">Расписание</a></li>
         <li><a class="navbar-button" href="/php/Reviews.php">Отзывы</a></li>
         <li><a id="hidden" class="navbar-button" href="/php/admin/admin.php">Admin Reviews</a></li>
-        <div class="burger-menu">
+        <div onclick="burgerClick()" class="burger-menu">
             <span id="open-menu"></span>
+        </div>
         </div>
     </ul>
 </header>
