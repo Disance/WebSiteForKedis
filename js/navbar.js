@@ -19,3 +19,17 @@ document.onkeydown = function(event){
         }
     }
 }
+var flag = 1;
+function burgerClick(){
+    document.querySelector(".burger-menu").addEventListener('click', function(){
+    if (flag == 1){
+        this.classList.toggle('active');
+    document.getElementById('menu').classList.add('open');
+    flag = 2;
+    }
+    else if (flag == 2){
+    this.classList.toggle('active');
+    document.getElementById('menu').classList.remove('open');
+    flag = 1;
+    }})
+}

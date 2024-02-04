@@ -7,7 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div id="menu" class="menu">
+        <div class="title"><a href=""><img style="margin:40px 0px 0px 20px;" width="200px" src="/img/logotext.png" alt=""></a></div><br><br>
+        <div class="list-menu">
+        <ul>
+            <li><a class="button-menu" href="/php/Reviews.php">Главная</a></li>
+            <li><a class="button-menu" href="#">Новости</a></li>
+            <li><a class="button-menu" href="#">Специальности</a></li>
+            <li><a class="button-menu" href="#">Расписание</a></li>
+            <li><a class="button-menu" href="#">Отзывы</a></li>
+        </ul>
+        </div>
+        </div>
 <header id="header" class="header">
     <ul>
         <a href="/index.php"><img style="cursor: pointer;" width="80px" src="/img/logo.png" alt=""></a>
@@ -15,8 +26,10 @@
         <a href=""><img width="300px" src="/img/logotext.png" alt=""></a>
     </div>
         <div class="box-li">
-        <li><a style="color: #0288ce;" class="navbar-button" href="">Новости</a></li>
+        <li><a style="color: #0288ce;" class="navbar-button" href="/index.php">Главная</a></li>
+        <li><a class="navbar-button" href="">Новости</a></li>
         <li><a class="navbar-button" href="">Специальности</a></li>
+        <li><a class="navbar-button" href="">О нас</a></li>
         <li><a class="navbar-button" href="">Расписание</a></li>
         <li><a class="navbar-button" href="/php/Reviews.php">Отзывы</a></li>
         <li><a id="hidden" class="navbar-button" href="/php/admin/admin.php">Admin Reviews</a></li>
@@ -26,32 +39,6 @@
         </div>
     </ul>
 </header>
-
-<div id="menu" class="menu">
-<div class="title">Menu</div><br><br>
-<div class="list-menu">
-<ul>
-    <li><a href="/php/Reviews.php">Отзывы</a></li>
-    <li><a href="#">Новости</a></li>
-    <li><a href="#">Специальности</a></li>
-    <li><a href="#">Расписание</a></li>
-</ul>
-</div>
-</div>
-<script>
-    var flag = 1;
-    document.querySelector(".burger-menu").addEventListener('click', function(){
-    if (flag == 1){
-        this.classList.toggle('active');
-    document.getElementById('menu').classList.add('open');
-    flag = 2;
-    }
-    else if (flag == 2){
-    this.classList.toggle('active');
-    document.getElementById('menu').classList.remove('open');
-    flag = 1;
-    }})
-</script>
 <script src="/js/navbar.js"></script>
 </body>
 </html>

@@ -3,7 +3,8 @@ header{
     padding-top: 10px;
     border-radius: 10px;
     height: 100px;
-    background-color: #0d0014;
+    background: rgb(13,0,20);
+    background: linear-gradient(90deg, rgba(13,0,20,1) 64%, rgba(51,0,41,1) 100%);
 }
 header ul ul{
     transition: all 1s ;
@@ -33,6 +34,7 @@ header ul ul li {
 .logo-text{
     display: none;
     text-align: center;
+    right: 20px;
 }
 li{
     display: inline;
@@ -43,8 +45,7 @@ a{
 }
 .navbar-button{
     font-family: 'Overpass', sans-serif;
-    margin-left: 20px;
-    left: 50px;
+    left: 25px;
     border-radius: 8px;
     font-weight: bold;
     bottom: 35px;
@@ -54,9 +55,9 @@ a{
     transition: 0.3s;
     color: white;
     text-decoration: none;
-}
-.navbar-button:hover{
-    color: #0288ce;
+    &:hover{
+        color: #0288ce;
+    }
 }
 
 .burger-menu{
@@ -72,8 +73,11 @@ a{
     align-items: center;
     width: 30px;
     height: 18px;
+    &.active{
+        position: fixed;
+        top: -70%;
+    }
 }
-
 .burger-menu span{
     height: 2px;
     width: 80%;
@@ -108,43 +112,59 @@ transform: rotate(-45deg) translate(0,-50%);
     transform: rotate(45deg) translate(0,50%);
 }
 .menu{
+    width: 100%;
+    right: 0;
     z-index: 2;
     border-radius: 10px;
-    background-color: rgba(68, 68, 68, 0.363);
-    height: 100vh;
-    padding-top: 25vh;
-    padding-right: 40px;
+    background: rgba(13, 0, 20, 0.603);
+    height: 100%;
     position: fixed;
-    right: -450px;
+    opacity: 0;
+    visibility: hidden;
     transition: 1s;
     backdrop-filter: blur(10px) ;
     &.open{
-        right: 0px;
+        opacity: 1;
+        visibility: visible;
     }
 }
-.title{
-    left: 50px;
-    position: relative;
+.sub-menu{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    font-family: 'Overpass', sans-serif;
+    border-radius: 5px;
+    text-align: center;
+    top: 0;
+    position: absolute;
+    text-shadow: 1px 1px 0 #4074b5, 1px -1px 0 #4074b5, -1px 1px 0 #4074b5, -1px -1px 0 #4074b5, 1px 0px 0 #4074b5, 0px 1px 0 #4074b5, -1px 0px 0 #4074b5, 0px -1px 0 #4074b5;
+    color: #000000;
     font-size: 40px;
+    width: 100%;
 }
 .list-menu{
+    margin: 100px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
 }
 .list-menu li{
-    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 3px;
     border-radius: 8px;
+    min-width: 100%;
     background-color: #14001f;
+    right: 20px;
     padding: 6px 13px;
-    display: table;
+    display: block;
     transition: 0.4s;
-}
-.list-menu li:hover{
+    &:hover{
+    transform: scale(1.1);
     -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
--moz-box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
-box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
+    box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
+    }
 }
 .list-menu li a{
     color: #0288ce;
@@ -166,9 +186,6 @@ box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
         bottom: 70px;
         display: block;
     }
-    img{
-        
-    }
     header ul li{
         display: none;
         flex-direction: column;
@@ -182,6 +199,11 @@ box-shadow: 0px 0px 4px 2px rgba(0, 168, 255, 0.2);
     }
     .burger-menu{
         bottom: 100px;
+    }
+}
+@media (max-width:300px){
+    .logo-text{
+        transform: scale(0.3);
     }
 }
 @media(min-width: 910px){
