@@ -1,34 +1,61 @@
+
 *{
+    font-family: "Comfortaa", sans-serif;
     margin: auto 0;
     padding: auto 0;
 }
 body{
     background-color: black;
 }
+p{
+    overflow: hidden;
+}
 .container{
-    margin-bottom: 100px;
-    margin-top: 100px;
+    max-width: 1000px;
+    margin: 0 auto ;
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: #0d0014;
+}
+.container-form{
+    max-width: 1000px;
+    margin: 20px auto ;
     width: 90vw;
     padding: 10px 20px;
     border-radius: 7px;
-    background-color: rgb(255, 255, 255);
+    background-color: #0d0014;
 }
-.title{
+.headtitle{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 40px;
+    color: #008df6;
     text-align: center;
-    margin-right: 50px;
-}
-h1{
-    color: azure;
 }
 .title-review{
     color: black;
 }
+#text{
+    color: #008df6;
+    background-color: #171717;
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 800px;
+    height: 100px;
+}
+#name{
+    color:#008df6 ;
+    background-color: #171717;
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 200px;
+}
 .reviews{
+    color:#008df6 ;
     display: inline;
 }
 .text-review{
     margin-top: 5px;
-    color: black;
 }
 .reviews-block{
     margin-bottom: 20px;
@@ -43,6 +70,7 @@ h1{
     margin-left: -15px;
 }
 .title-review{
+    color:#008df6 ;
     display: inline;
 }
 form{
@@ -54,27 +82,53 @@ form{
   justify-content: center;
 }
 label{
-    font-size: 30px;
-}
-input{
-    padding: 10px 10px;
+    color: #008df6;
+    font-size: 20px;
+    position: relative;
+    top: -10px;
 }
 .button-form{
+    padding: 10px 20px;
     border: 1px solid black;
     color: white;
     border-radius: 5px;
-    background-color: green;
-    transition: 1s;
+    background-color:rgb(39, 23, 38) ;
+    transition: 0.3s;
     cursor: pointer;
+    &:hover{
+        background-color: rgb(53, 30, 51);
+    }
 }
-.button-form:hover{
-    background-color: rgb(5, 95, 5);
+.button-sort{
+    color: white;
+    background-color:rgb(39, 23, 38) ;
+    border-radius: 8px;
+    padding: 10px 20px;
+    float: right;
+    bottom: 40px;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    &.active{
+    visibility: visible;
+    opacity: 1;
+    }
+}
+.sorting{
+    color: white;
+    background-color:rgb(39, 23, 38) ;
+    bottom: 40px;
+    float: right;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 4px;
 }
 .error{
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    background-color: yellow ;
+    background-color: rgb(23, 17, 71) ;
     color: red;
 }
 .star-rating {
@@ -90,7 +144,6 @@ input{
     display: table;
     clear: both;
 }
-  
 .star-rating__ico {
     float: right;
     padding-left: 2px;
@@ -111,10 +164,12 @@ input{
 .star-rating__input:checked~.star-rating__ico:before {
     content: "\f005";
 }
-
-.sorting{
-    float: right;
-    position: relative;
-    padding: 10px 20px;
-    border-radius: 4px;
+@media (max-width:910px){
+    #name{
+        width: 20vw;
+    }
+    #text{
+        width: 80vw;
+    }
 }
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap')
