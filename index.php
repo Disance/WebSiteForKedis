@@ -16,14 +16,19 @@
     include ('pattern/navbar.php')
     ?>
     </div>
-    <div onclick="ScrollTopTop()" class="upward"></div>
+
+    <?php
+    include ('pattern/scrollTop.php')
+    ?>
 
     <div>
         
     </div>
 
-    <footer >
-    </footer>
+    <?php
+    include ('pattern/footer.php')
+    ?>
+    
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -90,6 +90,9 @@ $result = mysqli_query($link, "SELECT * FROM `reviews` ORDER BY $sort $sortinfo"
     <?php
     include ('../pattern/scrollTop.php')
     ?>
+    <?php
+    include ('../pattern/footer.php')
+    ?>
 <script src="/js/review.js"></script>
 </body>
 </html>
