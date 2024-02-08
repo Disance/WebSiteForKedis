@@ -16,19 +16,12 @@
     include ('pattern/navbar.php')
     ?>
     </div>
-
     <?php
     include ('pattern/scrollTop.php')
     ?>
-
-    <div>
-        
-    </div>
-
     <?php
     include ('pattern/footer.php')
     ?>
-    
     <script src="js/main.js"></script>
 </body>
 </html>

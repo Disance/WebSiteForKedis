@@ -35,14 +35,13 @@ $result = mysqli_query($link, "SELECT * FROM `reviews` ORDER BY $sort $sortinfo"
         <div class="headtitle">
         <p class="headtitle">Отзывы</p>
     </div>
-        <?php
-        if (isset($_GET['error'])){ ?>
-            <p class="error"><?php echo $_GET['error'] ;?></p>
-        <?php } ?>
-        <form method="post" action="check/check.php">
+        <form id="formReviews" method="post" action="check/check.php">
 
-            <label for="">Введите Имя или Логин:</label><br><input c id="name" name="name" placeholder="Имя" type="text"><br><br>
+            <label for="">Введите Имя или Логин:</label><br><input id="name" name="name" placeholder="Имя" type="text"><br><br>
             <label for="">Оставте отзыв: </label><br><textarea id="text" name="text" placeholder="Не более 200 символов" type="text"></textarea> <br><br><br>
+            <div class="error-block">
+                <p id="error" class="error"></p>
+            </div>
             <div class="star-rating">
                 <div class="star-rating__wrap">
                   <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
@@ -58,7 +57,7 @@ $result = mysqli_query($link, "SELECT * FROM `reviews` ORDER BY $sort $sortinfo"
                 </div>
                 <input style="visibility: hidden;" name="date" type="text" value="<?php echo $carbon?>">
               </div>
-            <br><input class="button-form" type="submit">
+            <br><input id="btnForm" class="button-form" type="submit">
         </form>
 
         <form method="post" action="check/checksort.php">
@@ -94,5 +93,6 @@ $result = mysqli_query($link, "SELECT * FROM `reviews` ORDER BY $sort $sortinfo"
     include ('../pattern/footer.php')
     ?>
 <script src="/js/review.js"></script>
+
 </body>
 </html>

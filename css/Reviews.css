@@ -130,8 +130,15 @@ label{
     text-align: center;
     background-color: rgb(23, 17, 71) ;
     color: red;
+    visibility: hidden;
+    transition: 0.2s;
+    &.active{
+        visibility: visible;
+    }
 }
 .star-rating {
+    top: 20px;
+    position: relative;
     font-size: 0;
   }
 .star-rating__wrap {
