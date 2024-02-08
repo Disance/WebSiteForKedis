@@ -32,6 +32,12 @@ p{
     color: #008df6;
     text-align: center;
 }
+.title-adminText{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 40px;
+    color: #008df6;
+    text-align: center;
+}
 .title-review{
     color: black;
 }
